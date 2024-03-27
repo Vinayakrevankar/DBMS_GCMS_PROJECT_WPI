@@ -6,6 +6,11 @@ exports.getAllProduct = async (_, res) => {
   return res.json(httpUtil.getSuccess(data));
 };
 
+exports.getProduct = async (req, res) => {
+  const data = await productDA.getProduct({idProduct: req.params.idProduct});
+  return res.json(httpUtil.getSuccess(data));
+};
+
 exports.addProduct = async (req, res) => {
   const {
     idBrand, idCategory, productName,

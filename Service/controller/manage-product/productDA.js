@@ -5,6 +5,8 @@ const SQLConnection = new SQLServer();
 
 exports.getAllProduct = () => SQLConnection.execute(sql.GET_ALL_PRODUCT);
 
+exports.getProduct = (idObj) => SQLConnection.execute(sql.GET_PRODUCT, idObj);
+
 exports.checkIfProductExist = (productObj) => SQLConnection.execute(sql.CHECK_PRODUCT_EXIST, productObj);
 
 exports.addProduct = (productObj) => SQLConnection.execute(sql.ADD_PRODUCT, productObj, true);

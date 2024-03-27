@@ -15,6 +15,7 @@ router.use((req, res, next) => {
 });
 
 router.get('/', [_async(productHandler.getAllProduct)]);
+router.get('/:idProduct', [_async(productHandler.getProduct)]);
 router.post('/add', [_async(productHandler.addProduct)]);
 router.put('/:idProduct', [_async(productHandler.updateProduct)]);
 // router.delete('/delete/:idBrand',[_async(productHandler.deleteProduct)]);
